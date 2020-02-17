@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ReservationContainer from '../ReservationsContainer/ReservationContainer.js'
+import Form from '../Form/Form.js'
 
 class App extends Component {
   constructor() {
@@ -15,6 +16,11 @@ class App extends Component {
       .then(reservations => this.setState({reservations}))
       .catch(error => console.log(error))
   }
+  addReservation = (newReservation) => {
+    let currentReservations = this.state.reservations;
+    currentReservations.push(newReservation)
+    this.setState({reservations: currentReservations})
+  }
 
 
   render() {
@@ -22,7 +28,8 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-      </div>
+          <Form addReservation={this.addReservation} />
+        </div>
       <div className='resy-container'>
         <ReservationContainer reservations={this.state.reservations} />
       </div>
