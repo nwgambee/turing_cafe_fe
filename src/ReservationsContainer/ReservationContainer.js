@@ -3,7 +3,7 @@ import ReservationCard from '../ReservationCard/ReservationCard';
 
 const ReservationContainer = ({reservations}) => {
   let reservationsList = reservations.map(reservation => {
-    return <ReservationCard />
+    return <ReservationCard name={reservation.name} id={reservation.id} date={reservation.date} time={reservation.time} number={reservation.number} />
   })
 
   return (
