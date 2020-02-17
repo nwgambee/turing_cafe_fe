@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-// import ReservationCard from '../ReservationCard/ReservationCard';
+import React from 'react';
+import ReservationCard from '../ReservationCard/ReservationCard';
 
 const ReservationContainer = ({reservations}) => {
-  console.log(reservations);
+  let reservationsList = reservations.map(reservation => {
+    return <ReservationCard />
+  })
 
   return (
     <section className='res-container'>
-
+    {reservationsList}
     </section>
   )
 }
