@@ -21,10 +21,10 @@ class App extends Component {
       <div className="App">
       <h1 className='app-title'>Turing Cafe Reservations</h1>
       <div className='resy-form'>
-
+      // form component here
       </div>
       <div className='resy-container'>
-
+      // card container here with this.state passed through to it 
       </div>
     </div>
     )
