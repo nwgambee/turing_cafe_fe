@@ -20,3 +20,13 @@ it('should update state when handleChange is invoked', () => {
   wrapper.instance().handleChange(mockEvent)
   expect(wrapper.state('name')).toEqual('Noah')
 })
+
+it('should invoke addReservation when make-res button is clicked', () => {
+  let wrapper = shallow(<Form addReservation={jest.fn()} />)
+  wrapper.instance().addReservation = jest.fn();
+  wrapper.instance().forceUpdate();
+  const mockEvent = {preventDefault: jest.fn()}
+  
+  wrapper.find('.make-res').simulate('click', mockEvent);
+  expect(wrapper.instance().addReservation).toHaveBeenCalledWith(mockEvent);
+})

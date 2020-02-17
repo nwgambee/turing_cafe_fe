@@ -13,3 +13,7 @@ it('should match the snapshot', () => {
   let wrapper = shallow(<App />);
   expect(wrapper).toMatchSnapshot();
 })
+
+// it('addReservation should update state', () => {
+//
+// })
