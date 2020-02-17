@@ -8,6 +8,12 @@ class App extends Component {
       reservations: [],
     }
   }
+  componentDidMount() {
+    fetch('http://localhost:3001/api/v1/reservations')
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error))
+  }
 
 
   render() {
