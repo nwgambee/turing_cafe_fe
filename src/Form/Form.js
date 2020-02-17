@@ -11,7 +11,7 @@ class Form extends Component {
     }
   }
   handleChange = (event) => {
-    console.log(event);
+    this.setState({[event.target]: event.target.value})
   }
 
   render() {
