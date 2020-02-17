@@ -17,11 +17,24 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   addReservation = (newReservation) => {
-    let currentReservations = this.state.reservations;
-    currentReservations.push(newReservation)
-    this.setState({reservations: currentReservations})
-  }
+    // let currentReservations = this.state.reservations;
+    // currentReservations.push(newReservation)
+    // this.setState({reservations: currentReservations})
 
+    const options = {
+      method: 'POST',
+      body: JSON.stringify({
+        name: newReservation.name, date: newReservation.date, time: newReservation.time, number: parseInt(newReservation.number)
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    fetch('http://localhost:3001/api/v1/reservations', options)
+      .then(res => res.json())
+      .then(reservation => this.setState({reservations: [...this.state.reservations, reservation]}))
+      .catch(error => console.log(error))
+  }
 
   render() {
     return (
