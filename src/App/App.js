@@ -17,10 +17,6 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   addReservation = (newReservation) => {
-    // let currentReservations = this.state.reservations;
-    // currentReservations.push(newReservation)
-    // this.setState({reservations: currentReservations})
-
     const options = {
       method: 'POST',
       body: JSON.stringify({
@@ -35,6 +31,18 @@ class App extends Component {
       .then(reservation => this.setState({reservations: [...this.state.reservations, reservation]}))
       .catch(error => console.log(error))
   }
+  cancelReservation = (id) => {
+    const options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    fetch(`http://localhost:3001/api/v1/reservations/${id}`, options)
+      .then(res => res.json())
+      .then(reservations => this.setState({ reservations }))
+      .catch(error => console.log(error))
+  }
 
   render() {
     return (
@@ -44,7 +52,7 @@ class App extends Component {
           <Form addReservation={this.addReservation} />
         </div>
       <div className='resy-container'>
-        <ReservationContainer reservations={this.state.reservations} />
+        <ReservationContainer reservations={this.state.reservations} cancelReservation={this.cancelReservation} />
       </div>
     </div>
     )
