@@ -31,8 +31,8 @@ class App extends Component {
       .then(reservation => this.setState({reservations: [...this.state.reservations, reservation]}))
       .catch(error => console.log(error))
   }
-  cancelReservation = () => {
-    console.log('cancelling');
+  cancelReservation = (id) => {
+    console.log('cancelling', id);
   }
 
   render() {
