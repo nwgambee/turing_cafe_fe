@@ -19,24 +19,25 @@ class Form extends Component {
       <form className='res-form'>
         <input
           placeholder='Name'
-          value={}
+          value={this.state.name}
           onChange={this.handleChange}
         />
         <input
           placeholder='Date'
-          value={}
+          value={this.state.date}
           onChange={this.handleChange}
         />
         <input
           placeholder='Time'
-          value={}
+          value={this.state.time}
           onChange={this.handleChange}
         />
         <input
           placeholder='# of Guests'
-          value={}
+          value={this.state.number}
           onChange={this.handleChange}
         />
+      </form>
     )
   }
 }
