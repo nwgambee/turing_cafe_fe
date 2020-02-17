@@ -11,7 +11,7 @@ class Form extends Component {
     }
   }
   handleChange = (event) => {
-    this.setState({[event.target]: event.target.value})
+    this.setState({name: event.target.value})
   }
 
   render() {
@@ -21,21 +21,25 @@ class Form extends Component {
           placeholder='Name'
           value={this.state.name}
           onChange={this.handleChange}
+          name='name'
         />
         <input
           placeholder='Date'
           value={this.state.date}
           onChange={this.handleChange}
+          name='date'
         />
         <input
           placeholder='Time'
           value={this.state.time}
           onChange={this.handleChange}
+          name='time'
         />
         <input
           placeholder='# of Guests'
           value={this.state.number}
           onChange={this.handleChange}
+          name='number'
         />
       </form>
     )
