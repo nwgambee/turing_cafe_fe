@@ -11,7 +11,7 @@ class App extends Component {
   componentDidMount() {
     fetch('http://localhost:3001/api/v1/reservations')
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(reservations => this.setState({reservations}))
       .catch(error => console.log(error))
   }
 
