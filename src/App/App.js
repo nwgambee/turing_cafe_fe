@@ -17,7 +17,9 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   addReservation = (newReservation) => {
-    console.log(newReservation);
+    let currentReservations = this.state.reservations;
+    currentReservations.push(newReservation)
+    this.setState({reservations: currentReservations})
   }
 
 
