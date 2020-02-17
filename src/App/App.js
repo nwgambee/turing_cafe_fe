@@ -16,6 +16,9 @@ class App extends Component {
       .then(reservations => this.setState({reservations}))
       .catch(error => console.log(error))
   }
+  addReservation = (newReservation) => {
+    console.log(newReservation);
+  }
 
 
   render() {
@@ -23,7 +26,7 @@ class App extends Component {
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-          <Form />
+          <Form addReservation={this.addReservation} />
         </div>
       <div className='resy-container'>
         <ReservationContainer reservations={this.state.reservations} />
