@@ -17,11 +17,21 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   addReservation = (newReservation) => {
-    let currentReservations = this.state.reservations;
-    currentReservations.push(newReservation)
-    this.setState({reservations: currentReservations})
-  }
+    // let currentReservations = this.state.reservations;
+    // currentReservations.push(newReservation)
+    // this.setState({reservations: currentReservations})
 
+    const options = {
+      method: 'POST',
+      body: JSON.stringify({
+        name: newReservation.name, date: newReservation.date, time: newReservation.time, number: parseInt(newReservation.number)
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    console.log(options);
+  }
 
   render() {
     return (
