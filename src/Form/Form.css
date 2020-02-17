@@ -1,0 +1,17 @@
+.res-form {
+
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+.make-res {
+  color: white;
+  background-color: teal;
+  font-size: 1em;
+  padding: 4px;
+  border-radius: 3px;
+  cursor: pointer;
+}
