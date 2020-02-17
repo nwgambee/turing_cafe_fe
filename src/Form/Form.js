@@ -41,6 +41,7 @@ class Form extends Component {
           onChange={this.handleChange}
           name='number'
         />
+        <button className='make-res'>Make Reservation</button>
       </form>
     )
   }
