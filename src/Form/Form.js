@@ -7,6 +7,31 @@ class Form extends Component {
       // name, date, time, number of guests
     }
   }
+  render() {
+    return (
+      <form className='res-form'>
+        <input
+          placeholder='Name'
+          value={}
+          onChange={this.handleChange}
+        />
+        <input
+          placeholder='Date'
+          value={}
+          onChange={this.handleChange}
+        />
+        <input
+          placeholder='Time'
+          value={}
+          onChange={this.handleChange}
+        />
+        <input
+          placeholder='# of Guests'
+          value={}
+          onChange={this.handleChange}
+        />
+    )
+  }
 }
 
 
