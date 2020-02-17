@@ -17,10 +17,6 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   addReservation = (newReservation) => {
-    // let currentReservations = this.state.reservations;
-    // currentReservations.push(newReservation)
-    // this.setState({reservations: currentReservations})
-
     const options = {
       method: 'POST',
       body: JSON.stringify({
