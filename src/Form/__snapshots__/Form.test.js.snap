@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<form
+  className="res-form"
+>
+  <input
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    value=""
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    placeholder="Date"
+    value=""
+  />
+  <input
+    name="time"
+    onChange={[Function]}
+    placeholder="Time"
+    value=""
+  />
+  <input
+    name="number"
+    onChange={[Function]}
+    placeholder="# of Guests"
+    value=""
+  />
+  <button
+    className="make-res"
+    onClick={[Function]}
+  >
+    Make Reservation
+  </button>
+</form>
+`;
