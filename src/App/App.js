@@ -32,7 +32,13 @@ class App extends Component {
       .catch(error => console.log(error))
   }
   cancelReservation = (id) => {
-    console.log('cancelling', id);
+    const options = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+    
   }
 
   render() {
