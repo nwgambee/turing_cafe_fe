@@ -4,9 +4,16 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-      // name, date, time, number of guests
+      name: '',
+      date: '',
+      time: '',
+      number: ''
     }
   }
+  handleChange = (event) => {
+    console.log(event);
+  }
+
   render() {
     return (
       <form className='res-form'>
