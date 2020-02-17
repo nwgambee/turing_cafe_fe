@@ -30,7 +30,10 @@ class App extends Component {
         'Content-Type': 'application/json'
       }
     }
-    console.log(options);
+    fetch('http://localhost:3001/api/v1/reservations', options)
+      .then(res => res.json())
+      .then(reservation => this.setState({reservations: [...this.state.reservations, reservation]}))
+      .catch(error => console.log(error))
   }
 
   render() {
