@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<section
+  className="res-card"
+>
+  <h3>
+    Noah
+  </h3>
+  <p>
+    12/13
+  </p>
+  <p>
+    3:45
+  </p>
+  <p>
+    4
+     guests
+  </p>
+  <button
+    className="remove-res-btn"
+    onClick={[Function]}
+  >
+    Cancel
+  </button>
+</section>
+`;
