@@ -31,6 +31,9 @@ class App extends Component {
       .then(reservation => this.setState({reservations: [...this.state.reservations, reservation]}))
       .catch(error => console.log(error))
   }
+  cancelReservation = () => {
+    console.log('cancelling');
+  }
 
   render() {
     return (
@@ -40,7 +43,7 @@ class App extends Component {
           <Form addReservation={this.addReservation} />
         </div>
       <div className='resy-container'>
-        <ReservationContainer reservations={this.state.reservations} />
+        <ReservationContainer reservations={this.state.reservations} cancelReservation={this.cancelReservation} />
       </div>
     </div>
     )
